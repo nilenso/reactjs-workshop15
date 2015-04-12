@@ -8,13 +8,13 @@
   var TodoItem = React.createClass({
     onChange: function(event) {
       if (event.target.checked) {
-        this.props.onCheck(event.target.name);
+        this.props.onCheck(event.target.id);
       }
     },
 
     render: function() {
       return li({}, input({ type: "checkbox",
-                            name: this.props.id,
+                            id: this.props.id,
                             onChange: this.onChange }),
                     this.props.text);
     }
